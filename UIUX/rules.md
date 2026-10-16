@@ -1,0 +1,39 @@
+---
+description: >-
+  Personal UI/UX preferences: minimal UI, modest radius, confirm destructive
+  actions, custom modal/toast (never alert), one-step flows, no tech jargon in UI.
+globs: "**/*.{tsx,jsx,vue,html,css,scss}"
+alwaysApply: false
+---
+
+# UIUX 偏好
+
+做界面、交互、前端时按本 rule 执行。默认：**简洁优先**。
+
+## 原则
+
+1. **如无必要，勿增实体** — 少一层结构、少一个控件、少一个页面；能合并就合并。
+2. **能一步完成的，不要拆成多个 UI** — 减少跳转与歧义；同一意图尽量在同一视图内完成。
+3. **文案面向用户** — 不要把过技术的细节（接口名、内部状态码、实现术语等）写进 UI。
+
+## 视觉
+
+- 元素可以有圆角，但**一般别太大**（克制，避免胶囊/大圆角堆砌）。
+- 整体偏简洁：少装饰、少卡片套卡片、少无意义分隔。
+
+## 反馈与确认
+
+- **禁止**使用系统 `alert` / `confirm` / `prompt`。
+- 弹窗（Modal）、Toast 要**美观、统一**，用项目内自定义组件，不要临时弹原生对话框。
+- **敏感操作**（删除、清空、不可逆提交等）必须**二次确认**（自定义 Modal，文案说清后果）。
+
+## 自检清单
+
+实现或改 UI 前过一遍：
+
+- [ ] 有没有多余实体/多余步骤？
+- [ ] 圆角是否过大？
+- [ ] 删除等敏感操作是否二次确认？
+- [ ] 是否用了 `alert`/`confirm`/`prompt`？→ 必须换成自定义 Modal / Toast
+- [ ] 能一步做完的事是否被拆开了？
+- [ ] UI 文案是否夹带技术细节？
