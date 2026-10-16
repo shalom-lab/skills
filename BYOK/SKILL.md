@@ -76,8 +76,10 @@ Settings 里 repo 也是**单输入框**（placeholder：`owner/repo`），不�
 
 ## Settings UX
 
-- 密码型输入 + 保存 / 清除（清除二次确认）
-- 保存：`localStorage.setItem`；清除：`removeItem`
+- 密码型输入 + **保存** / 清除（清除二次确认）
+- **不要**单独做「测试连接」按钮；测连与保存合为一体，只留 **保存**
+- 点保存：按钮转圈 → 用当前表单值测连（GitHub / API 等）→ **通过才** `localStorage.setItem` 并提示成功；失败则不写入、中文报错、停转圈
+- 清除：`removeItem`（二次确认）
 - 只展示状态，不展示完整 secret
 - 可选：用量/额度紧挨密钥区
 
