@@ -1,14 +1,16 @@
 ---
 description: >-
-  Personal UI/UX preferences: minimal UI, modest radius, confirm destructive
-  actions, custom modal/toast (never alert), one-step flows, no tech jargon in UI.
+  Personal UI/UX preferences: minimal but tasteful (简洁≠朴素难看), modest
+  radius, confirm destructive actions, custom modal/toast (never alert),
+  one-step flows, no tech jargon in UI.
 globs: "**/*.{tsx,jsx,vue,html,css,scss}"
 alwaysApply: false
 ---
 
 # UIUX 偏好
 
-做界面、交互、前端时按本 rule 执行。默认：**简洁优先**。
+做界面、交互、前端时按本 rule 执行。默认：**简洁优先**。  
+**简洁 ≠ 朴素难看**：少控件、少步骤，但仍要有品味——层次、间距、字体、色彩与反馈都要好看；克制装饰，不是做成灰白简陋。
 
 ## 原则
 
@@ -19,7 +21,7 @@ alwaysApply: false
 ## 视觉
 
 - 元素可以有圆角，但**一般别太大**（克制，避免胶囊/大圆角堆砌）。
-- 整体偏简洁：少装饰、少卡片套卡片、少无意义分隔。
+- 整体偏简洁：少装饰、少卡片套卡片、少无意义分隔——**删繁就简，不等于敷衍丑界面**。
 
 ## 反馈与确认
 
@@ -32,6 +34,7 @@ alwaysApply: false
 实现或改 UI 前过一遍：
 
 - [ ] 有没有多余实体/多余步骤？
+- [ ] 简洁是否滑向朴素难看？（层次/间距/字体/色彩是否仍有味道）
 - [ ] 圆角是否过大？
 - [ ] 删除等敏感操作是否二次确认？
 - [ ] 是否用了 `alert`/`confirm`/`prompt`？→ 必须换成自定义 Modal / Toast
